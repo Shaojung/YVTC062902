@@ -22,6 +22,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void click1(View v) {
+        TextView tv = (TextView) findViewById(R.id.textView5);
+        switch (v.getId())
+        {
+            case R.id.button2:
+                tv.setText("111");
+                break;
+            case R.id.button3:
+                tv.setText("222");
+                break;
+            case R.id.button4:
+                tv.setText("333");
+                break;
+        }
+    }
 
 }
 
