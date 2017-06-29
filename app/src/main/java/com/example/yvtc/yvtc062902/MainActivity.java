@@ -14,16 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btn = (Button) findViewById(R.id.button);
-        MyClick cc = new MyClick();
-        btn.setOnClickListener(cc);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView tv = (TextView) findViewById(R.id.textView3);
+                tv.setText("Hello World");
+            }
+        });
     }
-    class MyClick implements View.OnClickListener
-    {
-        @Override
-        public void onClick(View v) {
-            TextView tv = (TextView) findViewById(R.id.textView3);
-            tv.setText("Hello World");
-        }
-    }
+
 }
 
